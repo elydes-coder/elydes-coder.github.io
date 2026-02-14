@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Us 🤍</title>
+
+<style>
+body{
+    margin:0;
+    font-family: 'Georgia', serif;
+    background-color:#f5efe6;
+    color:#5c5248;
+    overflow-x:hidden;
+}
+
+/* NAV */
+nav{
+    text-align:center;
+    padding:20px;
+    background:#e8dfd3;
+}
+
+nav a{
+    text-decoration:none;
+    color:#7a6f63;
+    margin:0 30px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#bfae9c;
+}
+
+/* TITLE */
+.title{
+    text-align:center;
+    margin-top:60px;
+    font-size:2em;
+    letter-spacing:3px;
+}
+
+/* POLAROIDS */
+.gallery{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:60px;
+    margin:80px auto;
+    width:80%;
+}
+
+.polaroid{
+    background:white;
+    padding:15px 15px 40px 15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    width:250px;
+    transition:.4s;
+    transform:rotate(-3deg);
+}
+
+.polaroid:nth-child(2){
+    transform:rotate(4deg);
+}
+
+.polaroid:nth-child(3){
+    transform:rotate(-5deg);
+}
+
+.polaroid:hover{
+    transform:scale(1.05);
+}
+
+.polaroid img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+}
+
+/* FLOATING EFFECT */
+@keyframes float{
+    0%{transform:translateY(0px);}
+    50%{transform:translateY(-10px);}
+    100%{transform:translateY(0px);}
+}
+
+.polaroid{
+    animation:float 6s ease-in-out infinite;
+}
+
+/* FOOTER TEXT */
+.footer-text{
+    text-align:center;
+    margin:100px 0 60px 0;
+    font-style:italic;
+    font-size:1.1em;
+    opacity:0.8;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="#">Songs</a>
+<a href="us.html">Us 🤍</a>
+</nav>
+
+<div class="title">
+Just Us
+</div>
+
+<div class="gallery">
+
+<div class="polaroid">
+<img src="foto1.jpg">
+</div>
+
+<div class="polaroid">
+<img src="foto2.jpg">
+</div>
+
+<div class="polaroid">
+<img src="foto3.jpg">
+</div>
+
+</div>
+
+<div class="footer-text">
+Our little world. Our soft love. Our forever.
+</div>
+
+</body>
+</html>
