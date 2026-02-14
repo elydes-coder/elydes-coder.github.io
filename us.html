@@ -2,34 +2,14 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Us 🤍</title>
+<title>Us >.<</title>
 
 <style>
 body{
     margin:0;
     font-family: 'Georgia', serif;
-    background-color:#f5efe6;
+    background-color:#f0f0f0; 
     color:#5c5248;
-    overflow-x:hidden;
-}
-
-/* NAV */
-nav{
-    text-align:center;
-    padding:20px;
-    background:#e8dfd3;
-}
-
-nav a{
-    text-decoration:none;
-    color:#7a6f63;
-    margin:0 30px;
-    font-weight:bold;
-    transition:.3s;
-}
-
-nav a:hover{
-    color:#bfae9c;
 }
 
 /* TITLE */
@@ -40,52 +20,45 @@ nav a:hover{
     letter-spacing:3px;
 }
 
-/* POLAROIDS */
+/* COLLAGE DE POLAROIDS */
 .gallery{
     display:flex;
-    justify-content:center;
     flex-wrap:wrap;
-    gap:60px;
-    margin:80px auto;
-    width:80%;
+    justify-content:center;
+    gap:10px; /* menos espacio para que se vean más juntas */
+    padding:50px;
+    position: relative;
 }
 
+/* Cada polaroid con rotación aleatoria */
 .polaroid{
     background:white;
     padding:15px 15px 40px 15px;
     box-shadow:0 10px 25px rgba(0,0,0,0.15);
-    width:250px;
+    width:200px;
     transition:.4s;
-    transform:rotate(-3deg);
+    position: relative;
 }
 
-.polaroid:nth-child(2){
-    transform:rotate(4deg);
-}
-
-.polaroid:nth-child(3){
-    transform:rotate(-5deg);
-}
+/* Rotaciones individuales usando variables --i */
+.polaroid:nth-child(1) { transform: rotate(-5deg); }
+.polaroid:nth-child(2) { transform: rotate(4deg); }
+.polaroid:nth-child(3) { transform: rotate(-3deg); }
+.polaroid:nth-child(4) { transform: rotate(5deg); }
+.polaroid:nth-child(5) { transform: rotate(-2deg); }
+.polaroid:nth-child(6) { transform: rotate(-5deg); } /* última tres giran izquierda */
+.polaroid:nth-child(7) { transform: rotate(-4deg); }
+.polaroid:nth-child(8) { transform: rotate(-6deg); }
 
 .polaroid:hover{
-    transform:scale(1.05);
+    transform: scale(1.05) rotate(0deg); /* se endereza al pasar el mouse */
+    z-index:10;
 }
 
 .polaroid img{
     width:100%;
-    height:300px;
+    height:250px;
     object-fit:cover;
-}
-
-/* FLOATING EFFECT */
-@keyframes float{
-    0%{transform:translateY(0px);}
-    50%{transform:translateY(-10px);}
-    100%{transform:translateY(0px);}
-}
-
-.polaroid{
-    animation:float 6s ease-in-out infinite;
 }
 
 /* FOOTER TEXT */
@@ -101,15 +74,20 @@ nav a:hover{
 
 <body>
 
-<nav>
-<a href="index.html">Home</a>
-<a href="#">Songs</a>
-<a href="us.html">Us 🤍</a>
-</nav>
-
 <div class="title">
-Just Us
+:¨ ·.· ¨:
+  Our memories `· . ꔫ ˖*
 </div>
+<div class="gallery">
+
+    <!-- ASCII de fondo -->
+    <pre class="ascii-background">
+⣴⠶⠖⠛⠛⠛
+  Π_    
+ /_/_＼
+｜ 田｜門｜
+⠀⠀⠀
+    </pre>
 
 <div class="gallery">
 
@@ -125,11 +103,43 @@ Just Us
 <img src="foto3.jpg">
 </div>
 
+<div class="polaroid">
+<img src="foto4.jpg">
 </div>
 
-<div class="footer-text">
-Our little world. Our soft love. Our forever.
+<div class="polaroid">
+<img src="foto5.jpg">
 </div>
+
+<div class="polaroid">
+<img src="foto6.jpg">
+</div>
+
+<div class="polaroid">
+<img src="foto7.jpg">
+</div>
+
+<div class="polaroid">
+<img src="foto8.jpg">
+</div>
+
+<pre class="ascii-heart">
+.　 +⠀   ⠀
+⠀˚⠀ ⣴⠟⠉⠉⠛⢦⡀⢀⣴⠛⠉⠈⠙⠻⣄
+⠀⠀⣼⠃⠀⠀⠀⠀⠀⠙⠋⠀⠀⠀⠀⠀⠀⠹⣦
+⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿
+⠀⠀⠿⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⡆
+⠀⠀⠀⢻⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡼⠃
+⠀⠀⠀⠀⠀⠻⢦⣄⠀⠀⠀⠀⠀⣠⡴⠛
+⠀⠀⠀⠀⠀⠀⠀⠉⠛⠶⣄⠶⠋ ⠀⠀⠀+.  *
+    </pre>
+</div>
+<div class="footer-text">
+I Love You </div>
 
 </body>
 </html>
+
+
+
+
